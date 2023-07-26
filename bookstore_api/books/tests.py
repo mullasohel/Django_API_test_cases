@@ -1,10 +1,4 @@
 
-from django.test import TestCase
-from django.urls import reverse
-from rest_framework import status
-from rest_framework.test import APIClient
-from .models import Book
-
 """
     test_get_books_list: 
     It checks if the endpoint returns a successful response (HTTP 200) and verifies that the number of books returned matches the number of books in the database.
@@ -13,6 +7,12 @@ from .models import Book
     It checks if the API returns a successful response (HTTP 200) and confirms that the response data is an empty list.
 
 """
+
+from django.test import TestCase
+from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APIClient
+from .models import Book
 
 class BookAPITestCase(TestCase):
     def setUp(self):
